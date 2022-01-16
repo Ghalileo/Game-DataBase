@@ -24,7 +24,7 @@
   URL
 
   # User Story
-  As a gamer, I WANT a database which displays the most popular and up to date games
+  As a gamer, I WANT a database which will display the most popular and up to date games
 
   # Contribution 
   Ghalileo Oseghale
