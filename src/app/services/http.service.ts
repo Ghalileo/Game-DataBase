@@ -20,8 +20,8 @@ export class HttpService {
       params = new HttpParams().set('ordering', ordering);
     }
 
-    return this.http.get<APIResponse<Game>>(`{$env.BASE_URL}/games`);{
-      params: params
-    }
+    return this.http.get<APIResponse<Game>>(`${env.BASE_URL}/games`, {
+      params:params,
+    })
   }
 }
