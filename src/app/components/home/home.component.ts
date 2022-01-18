@@ -12,6 +12,7 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class HomeComponent implements OnInit {
   public sort!: string;
+  // An Array of games
   public games!: Array<Game>;
   constructor(
     private httpService: HttpService,
@@ -22,11 +23,12 @@ export class HomeComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params)=> {
       if(params['game-search']) {
         this.searchGames('metacrit', params['game-search']);
-      }else{
+      } else {
         this.searchGames('metacrit');
       }
     });
   }
+  // Calls API and searches game data.  
   searchGames(sort: string, search?: string): void{
     this.httpService
     .getGameList(sort, search)

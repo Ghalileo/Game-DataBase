@@ -18,23 +18,29 @@
 </div>
 
 <div class="games">
-    <div class="game">
-        <div class="game-thumb-container">
-            <img 
-                src="https://cdn.images.express.co.uk/img/dynamic/143/590x/Zelda-Breath-of-the-Wild-2-1183535.webp?r=1569592987381"
-                alt="thumbnail"
-                class="game-thumbnail"
-                />
-        </div>
-        <div class="game-description">
-            <p class="game-name">Name</p>
-            <div class="game-platforms">
-                <img
-                    class="game-platform"
-                    src="https://assets.nintendo.com/image/upload/b_white,c_pad,f_auto,h_382,q_auto,w_573/ncom/en_US/switch/site-design-update/hardware/switch/nintendo-switch-oled-model-white-set/gallery/image03?v=2021120300"
+    <ng-container *ngFor="let game of games">
+        <div class="game">
+            <div class="game-thumb-container">
+                <img 
+                    *ngIf="game.background_image"
+                    src="{{game.background_image}}"
                     alt="thumbnail"
+                    class="game-thumbnail"
                 />
+                    <p *ngIf="!game.background_image">No Image Available</p>
+            </div>
+            <div class="game-description">
+                <p class="game-name">{{game.name}}</p>
+                <div class="game-platforms">
+                    <img
+                        *ngFor="let gamePlatform of game.parent_platforms"
+                        class="game-platform"
+                        src="assets/images/platforms/{{gamePlatform.platform.slug}}.svg"
+                        alt="{{gamePlatform.platform.slug}}"
+                    />
+                    
+                </div>
             </div>
         </div>
-    </div>
+    </ng-container>
 </div>

@@ -9,7 +9,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -26,6 +26,7 @@ import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptors
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
