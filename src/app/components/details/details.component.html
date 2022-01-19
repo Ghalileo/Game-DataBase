@@ -11,7 +11,9 @@
         <div class="details-wrapper">
             <div class="game-header">
                 <h1 class="game-header-title">{{game.name}}</h1>
-                <h2 class="game-header-release-date">Released: {{game.released }}</h2>
+                <h2 class="game-header-release-date">Released: {{game.released | date}}</h2>
+                
+                
                 <p class="game-header-genres"><span *ngFor="let genre of game.genres; let last = last">{{genre.name}}<span *ngIf="!last">,</span></span></p>
                 <div class="game-gauge">
                     <mwl-gauge
@@ -32,6 +34,7 @@
                 </div>
             </div>
             <!-- Tabs will go here -->
+            <app-game-tabs></app-game-tabs>
         </div>
     </div>
 </div>
