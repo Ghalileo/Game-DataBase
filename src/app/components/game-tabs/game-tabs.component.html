@@ -29,14 +29,14 @@
                 </ng-container>
             </p>
         </mat-tab>
-        <mat-tab label="Screenshots" *ngIf="game.screenshots?.length">
+        <!-- <mat-tab label="Screenshots" *ngIf="game.screenshots?.length">
             <img 
             class="game-screenshot"
             *ngFor="let screenshot of game.screenshots"
             src="{{screenshot.image}}"
             alt="screenshot"/>
-        </mat-tab>
-        <mat-tab label="Trailers" *ngIf="game.trailers?.length">
+        </mat-tab> -->
+        <!-- <mat-tab label="Trailers" *ngIf="game.trailers?.length">
             <video
             class="game-trailer"
             controls
@@ -44,6 +44,6 @@
             >
             <source src="{{trailer.data?.max}}" type="video/mp4">
             </video>
-        </mat-tab>
+        </mat-tab> -->
     </mat-tab-group>
 </div>
