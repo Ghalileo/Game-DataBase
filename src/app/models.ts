@@ -11,7 +11,7 @@ export interface Game {
     parent_platforms:Array<ParentPlatform>;
     publishers:Array<Publishers>;
     ratings:Array<Rating>;
-    short_screenshots: Array<Screenshots>;
+    screenshots: Array<Screenshots>;
     trailers:Array<Trailer>;
     id:string;
 }
@@ -48,7 +48,7 @@ interface Screenshots {
 interface Trailer {
     data: {
         max: string;
-    }
+    };
 }
 
 

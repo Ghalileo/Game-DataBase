@@ -29,21 +29,22 @@
                 </ng-container>
             </p>
         </mat-tab>
-        <mat-tab label="Screenshots" *ngIf="game.short_screenshots?.length">
+        <mat-tab label="Screenshots" *ngIf="game.screenshots?.length">
             <img 
             class="game-screenshot"
-            *ngFor="let screenshots of game.short_screenshots"
+            *ngFor="let screenshots of game.screenshots"
             src="{{screenshots.image}}"
             alt="screenshot"/>
         </mat-tab>
-        <!-- <mat-tab label="Trailers" *ngIf="game.trailers?.length">
+        <mat-tab label="Trailers" *ngIf="game.trailers?.length">
             <video
             class="game-trailer"
             controls
             *ngFor="let trailer of game.trailers"
             >
             <source src="{{trailer.data?.max}}" type="video/mp4">
+            Browser Support Error
             </video>
-        </mat-tab> -->
+        </mat-tab>
     </mat-tab-group>
 </div>
