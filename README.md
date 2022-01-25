@@ -18,10 +18,10 @@
   
 
   # Installation 
-  N/A
+  https://ghalileo-game-database.netlify.app/
 
   # Usage 
-  URL
+  https://ghalileo-game-database.netlify.app/
 
   # User Story
   As a gamer, I WANT a database which will display the most popular and up to date games
